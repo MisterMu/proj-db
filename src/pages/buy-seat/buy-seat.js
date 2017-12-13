@@ -213,6 +213,54 @@ const mock_data = [
   ]
 ]
 
+const mock_data2 = [
+  [
+    {
+      id: 1,
+      taken: false
+    }, {
+      id: 2,
+      taken: false
+    }
+  ], [
+    {
+      id: 1,
+      taken: false
+    }, {
+      id: 2,
+      taken: false
+    }, {
+      id: 3,
+      taken: false
+    }, {
+      id: 4,
+      taken: false
+    }
+  ], [
+    {
+      id: 1,
+      taken: false
+    }, {
+      id: 2,
+      taken: false
+    }
+  ], [
+    {
+      id: 1,
+      taken: false
+    }, {
+      id: 2,
+      taken: false
+    }, {
+      id: 3,
+      taken: false
+    }, {
+      id: 4,
+      taken: false
+    }, 
+  ]
+]
+
 export class BuySeat extends React.Component {
   cancel() {
     console.log('cancel');
@@ -225,7 +273,7 @@ export class BuySeat extends React.Component {
   render() {
     return(
       <div>
-        <GetRoomMap room_type={1} name="Hall Name" seat={mock_data}/>
+        <GetRoomMap room_type={2} name="Hall Name" seat={mock_data2}/>
         <div className="buy-seat-button-container">
           <button className="buy-seat-button-red" onClick={this.cancel}>Cancel</button>
           <button className="buy-seat-button-green" onClick={this.proceed}>Proceed</button>

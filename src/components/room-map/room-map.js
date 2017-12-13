@@ -46,11 +46,37 @@ function getLectureHallMap(hall, name, pickSeat) {
 }
 
 function getConferenceMap(room, name) {
+  let rowA = room[0].map((item) => {
+    return <div className="room-map-seat vertical-seat">{item.id}</div>
+  });
+  let rowB = room[1].map((item) => {
+    return <div className="room-map-seat horizontal-seat">{item.id}</div>
+  })
+  let rowC = room[2].map((item) => {
+    return <div className="room-map-seat vertical-seat">{item.id}</div>
+  })
+  let rowD = room[3].map((item) => {
+    return <div className="room-map-seat horizontal-seat">{item.id}</div>
+  })
   return (
     <div className="room-map-host">
       <h2 className="room-map-name">{name}</h2>
-      <div className="room-map-seat-container">
-        <div className="room-map-table"/>
+      <div className="room-map-seat-container conference-room">
+        <div className="conference-board"></div>
+        <div className="conference-table">
+          <div className="conference-row-A">
+            {rowA}
+          </div>
+          <div className="conference-row-B">
+            {rowB}
+          </div>
+          <div className="conference-row-C">
+            {rowC}
+          </div>
+          <div className="conference-row-D">
+            {rowD}
+          </div>
+        </div>
       </div>
     </div>
   );
