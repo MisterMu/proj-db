@@ -5,7 +5,7 @@ export function GetRoomMap(props) {
   if (props.room_type == 1) {
     return getLectureHallMap(props.seat, props.name, props.cancel, props.proceed, props.pickSeat);
   } else if (props.room_type == 2) {
-    return getConferenceMap();
+    return getConferenceMap(props.seat, props.name);
   // } else if (props.room_type == 3) {
   //   return getConcertHallMap();
   // } else if (props.room_type == 4) {
@@ -37,10 +37,10 @@ function getLectureHallMap(hall, name, pickSeat) {
   return (
     <div className="room-map-host">
       <h2 className="room-map-name">{name}</h2>
-      <div className="room-map-seat-container">
+      <div className="room-map-seat-container lecture-hall">
         {row}
+        <div className="room-map-screen">SCREEN</div>
       </div>
-      <div className="room-map-screen">SCREEN</div>
     </div>
   );
 }
