@@ -1,0 +1,35 @@
+.card-form {
+  width: 300px;
+  position: relative;
+  margin: 20px auto;
+}
+
+input[name="card_hol"], input[name="card_num"] {
+  width: 280px;
+}
+
+input[name="card_cvv"], input[name="card_exp"] {
+  width: 130px;
+  min-width: 0;
+  position: absolute;
+}
+
+input[name="card_cvv"] {
+  left: 0;
+}
+
+input[name="card_exp"] {
+  left: calc(50% + 5px);
+}
+
+.card-submit {
+  font-size: 1em;
+  padding: 8px 20px;
+  border-radius: 10px;
+  margin-top: 45px;
+  float: right;
+  /* border-color: #F25821; */
+  color: white;
+  background-color: #F25821;
+  outline: none;
+}
