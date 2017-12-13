@@ -4,6 +4,7 @@
 }
 
 .room-map-name {
+  margin-left: 50px;
   color: #F25821;
 }
 
@@ -23,6 +24,12 @@
 .conference-room {
   width: 320px;
   height: 380px;
+  position: relative;
+}
+
+.concert-hall {
+  width: 720px;
+  height: 600px;
   position: relative;
 }
 
@@ -52,6 +59,14 @@
   flex-flow: column wrap;
   -webkit-justify-content: center;
   justify-content: center;
+}
+
+.column-wrapper.zoneA {
+  height: 180px;
+}
+
+.column-wrapper.zoneB {
+  height: 360px;
 }
 
 .vertical-seat {
@@ -184,4 +199,51 @@
 .auditorium-zone-3 {
   position: absolute;
   left: 520px;
+}
+
+.concert-hall-zone-1 {
+  position: absolute;
+  left: 30px;
+  top: 400px;
+}
+
+.concert-hall-zone-2 {
+  position: absolute;
+  left: 620px;
+  top: 400px;
+}
+
+.concert-hall-zone-3 {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+
+.concert-hall-zone-4 {
+  position: absolute;
+  left: 620px;
+  top: 30px;
+}
+
+.concert-hall-zone-5 {
+  position: absolute;
+  left: 166px;
+  top: 30px;
+}
+
+.concert-hall-zone-6 {
+  position: absolute;
+  left: 230px;
+  top: 180px;
+}
+
+.concert-stage {
+  width: 450px;
+  font-size: 1.8em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: lightgrey;
+  position: absolute;
+  bottom: 40px;
+  left: 140px;
 }
