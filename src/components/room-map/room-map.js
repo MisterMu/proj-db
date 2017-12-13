@@ -8,8 +8,10 @@ export function GetRoomMap(props) {
     return getConferenceMap(props.seat, props.name);
   // } else if (props.room_type == 3) {
   //   return getConcertHallMap();
-  // } else if (props.room_type == 4) {
-  //   return getAuditoriumMap();
+  } else if (props.room_type == 4) {
+    return getAuditoriumMap(props.seat, props.name);
+  } else {
+    return null;
   }
 }
 
@@ -47,16 +49,32 @@ function getLectureHallMap(hall, name, pickSeat) {
 
 function getConferenceMap(room, name) {
   let rowA = room[0].map((item) => {
-    return <div className="room-map-seat vertical-seat">{item.id}</div>
+    if (item.taken) {
+      return <div className="room-map-seat-taken vertical-seat">{item.id}</div>
+    } else {
+      return <div className="room-map-seat vertical-seat">{item.id}</div>
+    }
   });
   let rowB = room[1].map((item) => {
-    return <div className="room-map-seat horizontal-seat">{item.id}</div>
+    if (item.taken) {
+      return <div className="room-map-seat-taken horizontal-seat">{item.id}</div>
+    } else {
+      return <div className="room-map-seat horizontal-seat">{item.id}</div>
+    }
   })
   let rowC = room[2].map((item) => {
-    return <div className="room-map-seat vertical-seat">{item.id}</div>
+    if (item.taken) {
+      return <div className="room-map-seat-taken vertical-seat">{item.id}</div>
+    } else {
+      return <div className="room-map-seat vertical-seat">{item.id}</div>
+    }
   })
   let rowD = room[3].map((item) => {
-    return <div className="room-map-seat horizontal-seat">{item.id}</div>
+    if (item.taken) {
+      return <div className="room-map-seat-taken horizontal-seat">{item.id}</div>
+    } else {
+      return <div className="room-map-seat horizontal-seat">{item.id}</div>
+    }
   })
   return (
     <div className="room-map-host">
@@ -76,6 +94,79 @@ function getConferenceMap(room, name) {
           <div className="conference-row-D">
             {rowD}
           </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function getAuditoriumMap(room, name) {
+  let zone1 = room[0].map((data, i) => {
+    let seat = data.map((item) => {
+      if (item.taken) {
+        return <div className="room-map-seat-taken vertical-seat">{item.id}</div>
+      } else {
+        return <div className="room-map-seat vertical-seat">{item.id}</div>
+      }
+    });
+    return (
+      <div className="room-map-row">
+        <div className="room-map-row-label vertical-seat">{String.fromCharCode(65 + i)}</div>
+        {seat}
+        <div className="room-map-row-label vertical-seat">{String.fromCharCode(65 + i)}</div>
+      </div>
+    );
+  });
+  let zone2 = room[1].map((data, i) => {
+    let seat = data.map((item) => {
+      if (item.taken) {
+        return <div className="room-map-seat-taken vertical-seat">{item.id}</div>
+      } else {
+        return <div className="room-map-seat vertical-seat">{item.id}</div>
+      }
+    });
+    return (
+      <div className="room-map-row">
+        <div className="room-map-row-label vertical-seat">{String.fromCharCode(65 + i)}</div>
+        {seat}
+        <div className="room-map-row-label vertical-seat">{String.fromCharCode(65 + i)}</div>
+      </div>
+    );
+  });
+  let zone3 = room[2].map((data, i) => {
+    let seat = data.map((item) => {
+      if (item.taken) {
+        return <div className="room-map-seat-taken horizontal-seat">{item.id}</div>
+      } else {
+        return <div className="room-map-seat horizontal-seat">{item.id}</div>
+      }
+    });
+    return (
+      <div className="room-map-column">
+        <div className="room-map-row-label horizontal-seat">{String.fromCharCode(65 + i)}</div>
+        {seat}
+        <div className="room-map-row-label horizontal-seat">{String.fromCharCode(65 + i)}</div>
+      </div>
+    );
+  });
+  return (
+    <div className="room-map-host">
+      <h2 className="room-map-name">{name}</h2>
+      <div className="room-map-seat-container auditorium-room">
+        <div className="auditorium-projection-room">
+            Rear Projection Room
+          <div className="auditorium-screen">
+            screen
+          </div>
+        </div>
+        <div className="auditorium-zone-1">
+          {zone1}
+        </div>
+        <div className="auditorium-zone-2">
+          {zone2}
+        </div>
+        <div className="auditorium-zone-3">
+          {zone3}
         </div>
       </div>
     </div>
