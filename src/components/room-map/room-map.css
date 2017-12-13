@@ -16,14 +16,23 @@
   margin-bottom: 8px;
 }
 
-.room-map-row-label ,.room-map-seat, .room-map-seat-taken {
+.vertical-seat {
   width: 28px;
   height: 35px;
+  padding-top: 10px;
+}
+
+.horizontal-seat {
+  width: 35px;
+  height: 28px;
+  padding-top: 7px;
+}
+
+.room-map-row-label ,.room-map-seat, .room-map-seat-taken {
   background-color: #e8e2dd;
   color: #f25821;
   display: inline-block;
   text-align: center;
-  padding-top: 10px;
   box-sizing: border-box;
   margin-right: 5px;
 }

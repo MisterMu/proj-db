@@ -18,19 +18,19 @@ function getLectureHallMap(hall, name, pickSeat) {
     let seat = data.map((item) => {
       if (item.taken) {
         return (
-          <div className="room-map-seat-taken" onClick={pickSeat}>{item.id}</div>
+          <div className="room-map-seat-taken vertical-seat" onClick={pickSeat}>{item.id}</div>
         );
       } else {
         return (
-          <div className="room-map-seat" onClick={pickSeat}>{item.id}</div>
+          <div className="room-map-seat vertical-seat" onClick={pickSeat}>{item.id}</div>
         );
       }
     });
     return (
       <div className="room-map-row">
-        <div className="room-map-row-label">{String.fromCharCode(70 - i)}</div>
+        <div className="room-map-row-label vertical-seat">{String.fromCharCode(70 - i)}</div>
           {seat}
-        <div className="room-map-row-label">{String.fromCharCode(70 - i)}</div>
+        <div className="room-map-row-label vertical-seat">{String.fromCharCode(70 - i)}</div>
       </div>
     );
   });
@@ -46,14 +46,11 @@ function getLectureHallMap(hall, name, pickSeat) {
 }
 
 function getConferenceMap(room, name) {
-  let row = room.map((data, i) => {
-  
-  });
   return (
     <div className="room-map-host">
       <h2 className="room-map-name">{name}</h2>
       <div className="room-map-seat-container">
-        {row}
+        <div className="room-map-table"/>
       </div>
     </div>
   );
