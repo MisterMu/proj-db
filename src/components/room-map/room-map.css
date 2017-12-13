@@ -247,3 +247,31 @@
   bottom: 40px;
   left: 140px;
 }
+
+.room-map-button-container {
+  position: absolute;
+  right: 100px;
+  bottom: -50px;
+}
+
+.room-map-button-red, .room-map-button-green {
+  border-radius: 5px;
+  padding: 5px 8px;
+  margin-right: 5px;
+  color: white;
+}
+
+.room-map-button-red {
+  background-color: red;
+}
+
+.room-map-button-green {
+  background-color: green;
+}
+
+.room-map-monitor {
+  position: absolute;
+  left: 100px;
+  bottom: -50px;
+
+}

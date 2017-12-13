@@ -848,10 +848,6 @@ export class BuySeat extends React.Component {
     return(
       <div>
         <GetRoomMap room_type={4} name="Hall Name" seat={mock_data4}/>
-        <div className="buy-seat-button-container">
-          <button className="buy-seat-button-red" onClick={this.cancel}>Cancel</button>
-          <button className="buy-seat-button-green" onClick={this.proceed}>Proceed</button>
-        </div>
       </div>
     );
   }

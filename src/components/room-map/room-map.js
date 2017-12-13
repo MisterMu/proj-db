@@ -43,6 +43,13 @@ function getLectureHallMap(hall, name, pickSeat) {
         {row}
         <div className="room-map-screen">SCREEN</div>
       </div>
+      <div className="room-map-monitor">
+        array of seat_id
+      </div>
+      <div className="room-map-button-container">
+          <button className="room-map-button-red">Cancel</button>
+          <button className="room-map-button-green">Proceed</button>
+        </div>
     </div>
   );
 }
@@ -96,6 +103,13 @@ function getConferenceMap(room, name) {
           </div>
         </div>
       </div>
+      <div className="room-map-monitor">
+        array of seat_id
+      </div>
+      <div className="room-map-button-container">
+          <button className="room-map-button-red">Cancel</button>
+          <button className="room-map-button-green">Proceed</button>
+        </div>
     </div>
   );
 }
@@ -162,6 +176,13 @@ function getConcertHallMap(hall, name) {
         </div>
         <div className="concert-stage">STAGE</div>
       </div>
+      <div className="room-map-monitor">
+        array of seat_id
+      </div>
+      <div className="room-map-button-container">
+          <button className="room-map-button-red">Cancel</button>
+          <button className="room-map-button-green">Proceed</button>
+        </div>
     </div>
   );
 }
@@ -235,6 +256,13 @@ function getAuditoriumMap(room, name) {
           <div className="column-wrapper">{zone3}</div>
         </div>
       </div>
+      <div className="room-map-monitor">
+        array of seat_id
+      </div>
+      <div className="room-map-button-container">
+          <button className="room-map-button-red">Cancel</button>
+          <button className="room-map-button-green">Proceed</button>
+        </div>
     </div>
   );
 }
