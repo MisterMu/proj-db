@@ -1,0 +1,77 @@
+.room-map-host {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.room-map-name {
+  color: #F25821;
+}
+
+.room-map-seat-container {
+  text-align: center;
+}
+
+.room-map-row {
+  margin-bottom: 8px;
+}
+
+.room-map-row-label ,.room-map-seat, .room-map-seat-taken {
+  width: 28px;
+  height: 35px;
+  background-color: #e8e2dd;
+  color: #f25821;
+  display: inline-block;
+  text-align: center;
+  padding-top: 10px;
+  box-sizing: border-box;
+  margin-right: 5px;
+}
+
+.room-map-seat, .room-map-seat-taken {
+  color: white;
+  background-color: #f25821;
+  position: relative;
+}
+
+.room-map-seat-taken::after, .room-map-seat:hover::after {
+  content: '\f00c';
+  font-family: FontAwesome;
+  font-size: 2em;
+  color: black;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.room-map-screen {
+  width: 600px;
+  height: 35px;
+  background-color:lightgrey;
+  text-align: center;
+  padding-top: 12px;
+  box-sizing: bordder-box;
+  margin: 45px auto;
+}
+
+.room-map-button-container {
+  position: absolute;
+  right: 100px;
+}
+
+.room-map-button-red, .room-map-button-green {
+  border-radius: 5px;
+  padding: 5px 8px;
+  margin-right: 5px;
+  color: white;
+}
+
+.room-map-button-red {
+  background-color: red;
+}
+
+.room-map-button-green {
+  background-color: green;
+}
