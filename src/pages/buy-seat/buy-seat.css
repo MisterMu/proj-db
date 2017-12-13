@@ -1,0 +1,19 @@
+.buy-seat-button-container {
+  position: absolute;
+  right: 100px;
+}
+
+.buy-seat-button-red, .buy-seat-button-green {
+  border-radius: 5px;
+  padding: 5px 8px;
+  margin-right: 5px;
+  color: white;
+}
+
+.buy-seat-button-red {
+  background-color: red;
+}
+
+.buy-seat-button-green {
+  background-color: green;
+}

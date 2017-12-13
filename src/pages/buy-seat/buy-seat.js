@@ -1,5 +1,6 @@
 import React from 'react';
 import { GetRoomMap } from '../../components/room-map/room-map';
+import './buy-seat.css';
 
 const mock_data = [
   [
@@ -224,7 +225,11 @@ export class BuySeat extends React.Component {
   render() {
     return(
       <div>
-        <GetRoomMap room_type={1} name="Hall Name" seat={mock_data} cancel={this.cancel} proceed={this.proceed}/>
+        <GetRoomMap room_type={1} name="Hall Name" seat={mock_data}/>
+        <div className="buy-seat-button-container">
+          <button className="buy-seat-button-red" onClick={this.cancel}>Cancel</button>
+          <button className="buy-seat-button-green" onClick={this.proceed}>Proceed</button>
+        </div>
       </div>
     );
   }
