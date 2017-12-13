@@ -166,7 +166,7 @@ function getAuditoriumMap(room, name) {
           {zone2}
         </div>
         <div className="auditorium-zone-3">
-          {zone3}
+          <div className="column-wrapper">{zone3}</div>
         </div>
       </div>
     </div>
