@@ -1,0 +1,24 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.ticket-host {
+  width: 600px;
+  margin: 15px auto;
+}
+
+.ticket-host::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.ticket-seat-info {
+  float: left;
+}
+
+.convention-info {
+  float: right;
+}

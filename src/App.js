@@ -5,13 +5,15 @@ import {EventCategory} from './components/event-category/event-category.js';
 import { Home } from './pages/home/home.js';
 import { BuySeat } from './pages/buy-seat/buy-seat';
 import { Login } from './pages/login/login.js';
+import { TicketPayment } from './pages/ticket-payment/ticket-payment';
 
 class App extends Component {
   render() {
     return (
       // <Home/>
       // <BuySeat/>
-      <Login/>
+      // <Login/>
+      <TicketPayment/>
     );
   }
 }
