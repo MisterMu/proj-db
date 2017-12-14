@@ -6,6 +6,7 @@ import { Home } from './pages/home/home.js';
 import { BuySeat } from './pages/buy-seat/buy-seat';
 import { Login } from './pages/login/login.js';
 import { TicketPayment } from './pages/ticket-payment/ticket-payment';
+import { EventPayment } from './pages/event-payment/event-payment';
 
 class App extends Component {
   render() {
@@ -13,7 +14,8 @@ class App extends Component {
       // <Home/>
       // <BuySeat/>
       // <Login/>
-      <TicketPayment/>
+      // <TicketPayment/>
+      <EventPayment/>
     );
   }
 }

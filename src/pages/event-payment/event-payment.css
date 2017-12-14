@@ -1,0 +1,24 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.payment-host {
+  width: 600px;
+  margin: 15px auto;
+}
+
+.payment-host::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.room-info {
+  float: left;
+}
+
+.convention-info {
+  float: right;
+}
