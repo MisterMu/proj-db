@@ -14,10 +14,10 @@ class App extends Component {
     return (
       // <Home/>
       // <BuySeat/>
-      // <Login/>
+      <Login/>
       // <TicketPayment/>
     // <EventPayment/>
-    <AddEvent/>
+    // <AddEvent/>
   );
   }
 }

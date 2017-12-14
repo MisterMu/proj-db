@@ -6,8 +6,9 @@ class Signup extends React.Component {
     super(props);
     this.state = {
       name: '',
-      mail: '',
-      pass: ''
+      email: '',
+      pass: '',
+      role: ''
     }
   }
 
@@ -31,8 +32,8 @@ class Signup extends React.Component {
         />
         <input
           type="email"
-          name="mail"
-          value={this.state.mail}
+          name="email"
+          value={this.state.email}
           placeHolder="Email"
           onChange={this.onChange}
         />
@@ -43,6 +44,11 @@ class Signup extends React.Component {
           placeHolder="Password"
           onChange={this.onChange}
         />
+        <select name="role" value={this.state.role} onChange={this.onChange}>
+          <option value="">-- Select you role --</option>
+          <option value="host">Host</option>
+          <option value="attendee">Attendee</option>
+        </select>
         <button className="submit" type="button" onClick={this.onSubmit}>Sign up</button>
       </form>
     );

@@ -5,7 +5,7 @@
   margin: 0 50px;
 }
 
-.signup-host input {
+.signup-host input, .signup-host select {
   min-width: 180px;
   padding: 5px;
   display: block;
