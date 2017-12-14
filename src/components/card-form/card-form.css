@@ -4,25 +4,31 @@
   margin: 20px auto;
 }
 
-input[name="card_hol"], input[name="card_num"] {
+.card-form input {
+  padding: 5px;
+  display: block;
+  margin: 0 auto 15px;
+  font-size: 1em;
+}
+
+.card-form input[name="card_hol"],.card-form  input[name="card_num"] {
   width: 280px;
 }
 
-input[name="card_cvv"], input[name="card_exp"] {
+.card-form input[name="card_cvv"],.card-form  input[name="card_exp"] {
   width: 130px;
-  min-width: 0;
   position: absolute;
 }
 
-input[name="card_cvv"] {
+.card-form input[name="card_cvv"] {
   left: 0;
 }
 
-input[name="card_exp"] {
+.card-form input[name="card_exp"] {
   left: calc(50% + 5px);
 }
 
-.card-submit {
+.card-form .card-submit {
   font-size: 1em;
   padding: 8px 20px;
   border-radius: 10px;
